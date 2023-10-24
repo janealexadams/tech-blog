@@ -1,0 +1,45 @@
+{{#each posts as |post|}}
+  <div id="posts">
+    <div class="card" style="max-width: 20em;">
+      <div class="card-image">
+        <figure class="image is-4by3">
+          <img src="{{post.code_block}}" alt="Placeholder image">
+        </figure>
+      </div>
+      <div class="card-content">
+        <div class="media">
+          <div class="media-content">
+            <p class="title is-4">Jane Adams
+              {{post.user.name}}
+            </p> 
+          </div>
+        </div>
+        <div class="content"> 
+          {{post.text}}
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-square-heart-fill" viewBox="0 0 16 16">
+          <path d="M2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2Zm6 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132Z"/>
+        </svg>
+        {{post.likes}}
+      </div>
+    </div>
+
+    <article class="media" style="max-width: 20em;">
+      <div class="media-content">
+        <div class="field">
+          <p class="control">
+            <textarea class="textarea" placeholder="Add a comment..."></textarea>
+          </p>
+        </div>
+        <nav class="level">
+          <div class="level-left">
+            <div class="level-item">
+              <a class="button is-info" id="submitButton"><strong>Comment</strong></a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </article>
+    {{/each}}
+  </div>
+

@@ -1,0 +1,107 @@
+#headerTitle {
+    color: rgb(152, 61, 152);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: xx-large;
+    position: absolute;
+    left: 50%;
+    margin-left: -50px;
+    display: block;
+}
+
+#navbarNav {
+    justify-content: flex-end;
+    margin-right: 30px;
+}
+
+.navbar {
+    background-color: rgb(217, 217, 217) !important;
+    position: relative;
+    height: 70px;
+}
+
+#signupForms {
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    position: relative;
+    margin-left: 150px;
+    padding: 10px; 
+    line-height: 30px;
+}
+
+#signinForm {
+    border: solid rgb(152, 61, 152);
+    border-radius: 20px;
+    box-sizing: border-box;
+    width: 400px;
+    height: 270px;
+    padding: 20px; 
+}
+
+#signupForm {
+    border: solid rgb(152, 61, 152);
+    border-radius: 20px;
+    box-sizing: border-box;
+    width: 400px;
+    height: 340px;
+    padding: 20px; 
+}
+
+#signinButton {
+    color: rgb(152, 61, 152);
+    background-color: rgb(217, 217, 217); 
+    border: rgb(217, 217, 217);
+}
+
+#signupButton {
+    color: rgb(152, 61, 152);
+    background-color: rgb(217, 217, 217); 
+    border: rgb(217, 217, 217);
+}
+
+#submitButton {
+    color: rgb(152, 61, 152);
+    background-color: rgb(217, 217, 217); 
+    border: rgb(217, 217, 217);
+}
+
+#cancelButton {
+    color: rgb(152, 61, 152);
+    background-color: rgb(217, 217, 217); 
+    border: rgb(217, 217, 217);
+}
+
+.card {
+    margin-top: 50px;
+}
+
+.content {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#posts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.media {
+    width: 500px;
+}
+
+#createPost {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    margin-left: 550px;
+    color: black;
+}
+
+.file-label {
+    color: black;
+    margin: 10px; 
+}
