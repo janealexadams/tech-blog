@@ -1,10 +1,10 @@
 async function commentFormHandler(event) {
     event.preventDefault();
 
-    const text = document.querySelector('textarea[class="textarea"]').value.trim();
+    const text = document.querySelector('.textarea').value.trim();
 
     if (text) {
-        const response = await fetch('/api/comments', {
+        const response = await fetch('/', {
             method: 'POST',
             body: JSON.stringify({
                 text
@@ -17,9 +17,9 @@ async function commentFormHandler(event) {
         if (response.ok) {
             document.location.reload();
         } else {
-            alert(response.statusText);
+            alert('Failed to add comment');
         }
     }
 }
 
-document.querySelector('.textarea').addEventListener('submit', commentFormHandler);
+document.querySelector('#commentButton').addEventListener('click', commentFormHandler);
