@@ -67,6 +67,13 @@
     border: rgb(217, 217, 217);
 }
 
+#deleteButton {
+    color: rgb(152, 61, 152);
+    background-color: rgb(217, 217, 217); 
+    border: rgb(217, 217, 217);
+    margin-left: 5px;
+}
+
 #cancelButton {
     color: rgb(152, 61, 152);
     background-color: rgb(217, 217, 217); 
