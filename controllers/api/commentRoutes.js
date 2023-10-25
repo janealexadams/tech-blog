@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { Comment, Post } = require('../../models');
 // const withAuth = require('../../utils/auth');
 
+// /comments endpoint
 // Get all comments 
 router.get('/', (req, res) => {
     Comment.findAll()

@@ -4,7 +4,7 @@ async function commentFormHandler(event) {
     const text = document.querySelector('.textarea').value.trim();
 
     if (text) {
-        const response = await fetch('/', {
+        const response = await fetch('/comments', {
             method: 'POST',
             body: JSON.stringify({
                 text
@@ -22,4 +22,4 @@ async function commentFormHandler(event) {
     }
 }
 
-document.querySelector('#commentButton').addEventListener('click', commentFormHandler);
+document.querySelector('#submitButton').addEventListener('click', commentFormHandler);
