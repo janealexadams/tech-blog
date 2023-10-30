@@ -2,16 +2,16 @@ const { Post } = require('../models');
 
 const postdata = [
     {
-      "title": "Weather Dashboard",
-      "code_block": "http://res.cloudinary.com/dwymtagmc/image/upload/v1698256573/h1vzqipgh9jkc44ujsue.png",
-      "text": "Just finished making a weather dashboard.",
+      "title": "Authentication vs Authorization",
+      "code_block": "",
+      "text": "There is a difference between authentication and authorization. Authentication means confirming your own identity, whereas authorization means being allowed access to the system.",
       "user_id": 1,
       "likes": 7
     },
     {
-      "title": "Look at my code..",
-      "code_block": 'http://res.cloudinary.com/dwymtagmc/image/upload/v1698256687/pm2arsa0o57lv5hdl7qk.png',
-      "text": "Would love feedback on this!",
+      "title": "Object-Relational Mapping",
+      "code_block": "",
+      "text": "I have really loved learning about ORMs. It's really simplified the way I create queries in SQL!",
       "user_id": 2,
       "likes": 5
     }

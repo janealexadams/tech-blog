@@ -1,24 +1,32 @@
 
 #headerTitle {
-    color: rgb(152, 61, 152);
+    color: rgb(75, 103, 186);
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bolder;
     font-size: xx-large;
-    position: absolute;
-    left: 50%;
-    margin-left: -90px;
+    /* position: absolute; */
+    /* left: 50%; */
+    margin-left: 20px;
     display: block;
 }
 
 #navbarNav {
-    justify-content: flex-end;
-    margin-right: 30px;
+    /* justify-content: flex-end;
+    margin-right: 30px; */
+    /* display: block; */
+}
+
+.nav-item {
+    /* display: block; */
+    margin-left: 30px;
 }
 
 .navbar {
     background-color: rgb(217, 217, 217) !important;
-    position: relative;
-    height: 70px;
+    /* position: relative; */
+    height: 100px;
+    display: block;
+    /* margin-left: 20px; */
 }
 
 .nav-link {
@@ -55,19 +63,21 @@
 }
 
 #signinButton {
-    color: rgb(152, 61, 152);
+    color: rgb(75, 103, 186);
     background-color: rgb(217, 217, 217); 
     border: rgb(217, 217, 217);
+    font-weight: bold;
 }
 
 #signupButton {
-    color: rgb(152, 61, 152);
+    color: rgb(75, 103, 186);
     background-color: rgb(217, 217, 217); 
     border: rgb(217, 217, 217);
+    font-weight: bold;
 }
 
 #commentButton {
-    color: rgb(152, 61, 152);
+    color: rgb(75, 103, 186);
     background-color: rgb(217, 217, 217); 
     border: rgb(217, 217, 217);
     font-weight: bold;
@@ -75,7 +85,7 @@
 }
 
 #submitButton {
-    color: rgb(152, 61, 152);
+    color: rgb(75, 103, 186);
     background-color: rgb(217, 217, 217); 
     border: rgb(217, 217, 217);
     font-weight: bold;
@@ -83,7 +93,7 @@
 }
 
 #deleteButton {
-    color: rgb(152, 61, 152);
+    color: rgb(75, 103, 186);
     background-color: rgb(217, 217, 217); 
     border: rgb(217, 217, 217);
     margin-left: 5px;
@@ -91,7 +101,7 @@
 }
 
 #cancelButton {
-    color: rgb(152, 61, 152);
+    color: rgb(75, 103, 186);
     background-color: rgb(217, 217, 217); 
     border: rgb(217, 217, 217);
     font-weight: bold;
@@ -99,7 +109,7 @@
 }
 
 #upload_widget {
-    color: rgb(152, 61, 152);
+    color: rgb(75, 103, 186);
     background-color: rgb(217, 217, 217); 
     border: rgb(217, 217, 217);
     margin-left: 95px;
@@ -122,7 +132,7 @@
 }
 
 .media {
-    width: 500px;
+    width: 1000px;
 }
 
 #createPost {
@@ -154,7 +164,6 @@
     margin-left: 125px;
 }
 
-
 .delete {
     display: none;
 }
@@ -162,3 +171,4 @@
 .comment-text:hover > .delete {
     display: inline;
 }
+
