@@ -1,3 +1,15 @@
+//create post button will retreive create post prompt
+var createPostPageEl = $('#createPost');
+
+$('.createNewPostBtn').on('click', function () {
+  createPostPageEl.removeClass('hidden');
+});
+
+
+
+
+
+
 let code_block = "";
 
 async function newPostHandler(event) {

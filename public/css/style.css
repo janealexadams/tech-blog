@@ -76,6 +76,16 @@
     font-weight: bold;
 }
 
+#createNewPostBtn {
+    color: rgb(75, 103, 186);
+    background-color: rgb(217, 217, 217); 
+    border: rgb(217, 217, 217);
+    font-weight: bold;
+    margin-top: 30px;
+    text-align: center; 
+    /* why isn't this working? */
+}
+
 #commentButton {
     color: rgb(75, 103, 186);
     background-color: rgb(217, 217, 217); 
@@ -172,3 +182,7 @@
     display: inline;
 }
 
+.hidden {
+    display: none;
+}
+/* this isnt working */
