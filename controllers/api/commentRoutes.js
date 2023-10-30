@@ -1,8 +1,8 @@
 const router = require('express').Router();
 const { Comment, Post } = require('../../models');
-// const withAuth = require('../../utils/auth');
 
-// /comments endpoint
+
+// /Comments endpoint
 // Get all comments 
 router.get('/', (req, res) => {
     Comment.findAll()
@@ -16,6 +16,7 @@ router.get('/', (req, res) => {
 // Create new comment
 router.post('/', (req, res) => {
     if (req.session) {
+        console.log(req.session.user_id);
         Comment.create({
                 text: req.body.text,
                 user_id: req.session.user_id,

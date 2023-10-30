@@ -1,21 +1,22 @@
 const router = require('express').Router();
 const { Post } = require('../../models');
 
-
+//create post
 router.post('/', async (req, res) => {
   try {
     const newPost = await Post.create({
       ...req.body,
-      // user_id: req.session.user_id,
-      user_id:1, 
+      user_id: req.session.user_id,
     });
 
-    res.status(200).json(newPost);
+    res.status(200).redirect('/');
   } catch (err) {
     res.status(400).json(err);
   }
 });
 
+
+//delete post
 router.delete('/:id', async (req, res) => {
   try {
     const newPost = await Post.destroy({
@@ -30,9 +31,9 @@ router.delete('/:id', async (req, res) => {
       return;
     }
 
-    res.status(200).json(postData);
+    res.status(200).json(newPost);
   } catch (err) {
-    res.status(500).json(err);
+    res.status(500).json(err.message);
   }
 });
 

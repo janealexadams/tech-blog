@@ -1,47 +1,49 @@
 <div class="container forms">
   <div class="row" id="signupForms">
     <div class="col">
-      <form id="signinForm">
+      <form id="login-form">
         <h1> <strong>Sign IN</strong> </h1>
         <div class="form-group">
-          <label for="exampleInputEmail1">E-mail Address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+          <label for="email-login">E-mail Address</label>
+          <input type="email" class="form-control" id="email-login" aria-describedby="emailHelp"
             placeholder="Enter email">
         </div>
         <div class="form-group">
-          <label for="exampleInputPassword1">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          <label for="password-login">Password</label>
+          <input type="password" class="form-control" id="password-login" placeholder="Password">
         </div>
         <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-          <label class="form-check-label" for="exampleCheck1">Keep Me Logged In</label>
+          <input type="checkbox" class="form-check-input" id="check-login">
+          <label class="form-check-label" for="check-login">Keep Me Logged In</label>
         </div>
-        <button id="signinButton" type="submit" class="btn btn-primary">Log In</button>
+        <button type="submit" class="btn btn-primary" id="signinButton">Log In</button>
       </form>
     </div>
     <div class="col">
-      <form id="signupForm">
+      <form id="signup-form">
         <h1> <strong>Sign UP</strong> </h1>
         <div class="form-group">
-          <label for="exampleInputEmail1">E-mail Address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+          <label for="email-signup">E-mail Address</label>
+          <input type="email" class="form-control" id="email-signup" aria-describedby="emailHelp"
             placeholder="Enter email">
         </div>
         <div class="form-group">
-          <label for="exampleInputPassword1">Username</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Username">
+          <label for="name-signup">Username</label>
+          <input type="text" class="form-control" id="name-signup" placeholder="Username">
         </div>
         <div class="form-group">
-          <label for="exampleInputPassword1">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          <label for="password-signup">Password</label>
+          <input type="password" class="form-control" id="password-signup" placeholder="Password">
         </div>
         <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-          <label class="form-check-label" for="exampleCheck1">Keep Me Signed In</label>
+          <input type="checkbox" class="form-check-input" id="check-signup">
+          <label class="form-check-label" for="check-signup">Keep Me Signed In</label>
         </div>
-        <button id="signupButton" type="submit" class="btn btn-primary">Sign Up</button>
+        <button type="submit" class="btn btn-primary" id="signupButton">Sign Up</button>
       </form>
     </div>
   </div>
+  <script src="/js/login.js"></script>
+</div>
 
 {{!-- need auth --}}

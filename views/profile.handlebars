@@ -1,0 +1,27 @@
+{{!-- <div id='profile'>
+  <h1>{{user.name}}</h1>
+  {{#if user.posts}}
+  <h2>My Posts:</h2>
+  <ul>
+  {{#each user.posts as |post|}}
+    <div class="'card" style="max-width: 20em;">
+      <p><strong>{{post.title}}</strong></p>
+      <div class="card-image">
+        <figure class="image is-4by3">
+          <img src="{{post.code_block}}" alt="Placeholder image">
+        </figure>
+      </div>
+      {{#if post.comments}}
+      <p>Comments: {{post.comments.length}}</p>
+      {{else}}
+      <p>No comments on this post yet</p>
+      {{/if}}
+    </div>
+  {{/each}}
+  </ul>
+  {{else}}
+  <h2>
+    You have no posts yet!
+  </h2>
+  {{/if}}
+</div> --}}
