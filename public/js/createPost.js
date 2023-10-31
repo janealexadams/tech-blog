@@ -31,7 +31,7 @@ document.querySelector("#submitButton").addEventListener('click', newPostHandler
 
 var myWidget = cloudinary.createUploadWidget({
   cloudName: 'deqzppd4t',
-  uploadPreset: 'tjj6snc6'
+  uploadPreset: 'ftr9mywz'
 }, (error, result) => {
   if (!error && result && result.event === "success") {
     console.log('Done! Here is the image info: ', result.info);

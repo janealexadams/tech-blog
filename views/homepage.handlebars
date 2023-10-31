@@ -10,7 +10,13 @@
       <div class="card-content">
         <div class="media">
           <div class="media-content">
-            <h5 class="card-title title is-4">{{post.title}}</h5>
+            <h5 class="card-title title is-4">{{post.title}} 
+                <svg id="like-button" class="likeButton" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+</svg>
+                <div id="like-counter" class="like">{{post.likes}}</div>
+            </h5>
+
             <p class="title is-6">
             {{#if post.user_id}}
             <a>Created by {{post.user.name}} on {{format_date post.date_created}}</a>
@@ -23,10 +29,6 @@
         <div class="content"> 
           {{post.text}}
         </div>
-        <svg id="like-button" class="likeButton" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-square-heart-fill" viewBox="0 0 16 16">
-          <path d="M2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2Zm6 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132Z"/>
-        </svg>
-        <div id="like-counter" class="likeCounter">{{post.likes}}</div>
         <hr class="line">
         <p class="comments">Comments:</p>
         {{#each post.comments as |comment|}}
@@ -48,7 +50,7 @@
               {{#delete_post user_id ../userId}}
               <button class="button is-info btn-delete" id="deleteButton" data-postid={{post.id}}>Delete Post</button>
               {{/delete_post}}
-              {{!-- i added for update post button --}}
+              {{!-- added for update post button --}}
               {{#update_post user_id ../userId}}
               <button class="button is-info btn-update" id="updateButton" data-postid={{post.id}}>Update Post</button>
               {{/update_post}}

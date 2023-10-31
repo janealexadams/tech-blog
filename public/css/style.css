@@ -1,9 +1,12 @@
+* {
+    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+}
 
 #headerTitle {
     color: rgb(75, 103, 186);
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bolder;
-    font-size: xx-large;
+    /* font-weight: 900; */
+    font-size: 40px;
     /* position: absolute; */
     /* left: 50%; */
     margin-left: 20px;
@@ -14,19 +17,23 @@
     /* justify-content: flex-end;
     margin-right: 30px; */
     /* display: block; */
+    /* font-weight: 900; */
 }
 
 .nav-item {
     /* display: block; */
-    margin-left: 30px;
+    margin-left: 50px;
+    margin-top: -15px;
+    font-size: 18px;
 }
 
 .navbar {
     background-color: rgb(217, 217, 217) !important;
     /* position: relative; */
-    height: 100px;
+    height: 105px;
     display: block;
     /* margin-left: 20px; */
+    font-weight: 900;
 }
 
 .nav-link {
@@ -94,7 +101,7 @@
     background-color: rgb(217, 217, 217); 
     border: rgb(217, 217, 217);
     font-weight: bold;
-    margin-left: 60px;
+    /* margin-left: 5px; */
 }
 
 #submitButton {
@@ -138,7 +145,7 @@
 }
 
 .card {
-    margin-top: 50px;
+    margin-top: 65px;
 }
 
 .content {
@@ -203,3 +210,33 @@
     display: none !important;
 } */
 /* this isnt working */
+
+#like-button {
+    display: inline-block;
+    position: absolute;
+    right: 30px;
+}
+
+#like-counter {
+    display: inline-block;
+    font-size: 15px;
+    position: absolute;
+    right: 38px;
+    padding-top: 3px;
+    color: white;
+    font-weight: bold;
+}
+
+.navbar-toggler-icon {
+    width: 20px;
+    height: 25px;
+}
+
+.navbar-toggler {
+    margin-left: 15px;
+}
+
+.navbar-collapse {
+    margin-top: 10px;
+    margin-left: -15px;
+}
