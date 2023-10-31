@@ -68,23 +68,19 @@ document.querySelector('#posts').addEventListener('click', checkButton)
 
 // update post
 router.put('/api/posts/:id', (req, res) => {
-    // Calls the update method on the Book model
     Post.update(
-      {// what you want to upate
-        // All the fields you can update and the data attached to the request body.
+      {
         title: req.body.title,
         code_block: req.body.code_block,
         text: req.body.text,
       },
-      { // where you want to update it
-        // Gets the books based on the isbn given in the request parameters
+      { 
         where: {
             id: req.params.id,
         },
       }
     )
       .then((updatedPost) => {
-        // Sends the updated book as a json response
         res.json(updatedPost);
       })
       .catch((err) => res.json(err));
@@ -102,7 +98,6 @@ likeButton.addEventListener('click', () => {
 });
 
 router.put('/:id', (req, res) => {
-    // Calls the update method on the Book model
     Post.update(
       {
         likes: req.body.likes,
