@@ -60,3 +60,19 @@ async function deletePostHandler(button) {
 
 document.querySelector('#posts').addEventListener('click', checkButton)
 
+
+// like button
+const likeBtn = document.getElementById('likes');
+const clickHandler = function () {
+  let count = 0;
+  return function () {
+    count++;
+    // this.textContent = `Clicks: ${count}`;
+  };
+};
+
+for (let i = 0; i < buttons.length; i++) {
+  buttons[i].addEventListener('click', clickHandler());
+}
+
+
