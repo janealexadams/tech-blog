@@ -37,4 +37,44 @@ router.delete('/:id', async (req, res) => {
   }
 });
 
+// update post
+// i added - need to check
+// router.put(':id', (req, res) => {
+//     Post.update(
+//       {
+//         title: req.body.title,
+//         code_block: req.body.code_block,
+//         text: req.body.text,
+//       },
+//       { 
+//         where: {
+//             id: req.params.id,
+//         },
+//       }
+//     )
+//       .then((updatedPost) => {
+//         res.json(updatedPost);
+//       })
+//       .catch((err) => res.json(err));
+//   });
+
+// update like count based on its id
+// i added this - need to check
+// router.put('/:id', (req, res) => {
+//     Post.update(
+//       {
+//         likes: req.body.likes,
+//       },
+//       {
+//         where: {
+//           id: req.params.id,
+//         },
+//       }
+//     )
+//       .then((updatedLikes) => {
+//         res.json(updatedLikes);
+//       })
+//       .catch((err) => res.json(err));
+//   });
+
 module.exports = router;

@@ -66,53 +66,29 @@ document.querySelector('#posts').addEventListener('click', checkButton)
 
 
 
-// update post
-router.put('/api/posts/:id', (req, res) => {
-    Post.update(
-      {
-        title: req.body.title,
-        code_block: req.body.code_block,
-        text: req.body.text,
-      },
-      { 
-        where: {
-            id: req.params.id,
-        },
-      }
-    )
-      .then((updatedPost) => {
-        res.json(updatedPost);
-      })
-      .catch((err) => res.json(err));
-  });
 
+// update like count 
+const likeButton = document.getElementsByClassName('likeButton');
+const likeCount = document.getElementsByClassName('likeCounter');
+let count = Number(likeCount.innerText);
+for (let i = 0; i < likeButton.length; i++) {
 
-// update like count based on its id
-const likeButton = document.getElementById('like-button');
-const likeCount = document.getElementById('like-counter');
-let count = `${post.likes}`;
+    likeButton.addEventListener('click', () => {
+    count++;
+    likeCount.innerText = count;
+    });;
+  }
+  
 
-likeButton.addEventListener('click', () => {
-  count++;
-  likeCount.innerText = count;
-});
+for (let i = 0; i < likeCount.length; i++) {
+    let count = Number(likeCount.innerText);
 
-router.put('/:id', (req, res) => {
-    Post.update(
-      {
-        likes: req.body.likes,
-      },
-      {
-        where: {
-          id: req.params.id,
-        },
-      }
-    )
-      .then((updatedLikes) => {
-        res.json(updatedLikes);
-      })
-      .catch((err) => res.json(err));
-  });
+    likeButton.addEventListener('click', () => {
+    count++;
+    likeCount.innerText = count;
+    });;
+  }
+
 
 // add a comment
 async function commentFormHandler(button) {
