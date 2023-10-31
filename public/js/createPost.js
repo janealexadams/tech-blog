@@ -42,7 +42,7 @@ async function newPostHandler(event) {
 document.querySelector("#submitButton").addEventListener('click', newPostHandler);
 
 var myWidget = cloudinary.createUploadWidget({
-  cloudName: 'dwymtagmc',
+  cloudName: 'deqzppd4t',
   uploadPreset: 'tjj6snc6'
 }, (error, result) => {
   if (!error && result && result.event === "success") {
@@ -53,6 +53,7 @@ var myWidget = cloudinary.createUploadWidget({
   }
 }
 )
+
 
 document.getElementById("upload_widget").addEventListener("click", function (event) {
   event.preventDefault();
