@@ -1,14 +1,3 @@
-//create post button will retreive create post prompt
-var createPostPageEl = $('#createPost');
-
-$('.createNewPostBtn').on('click', function () {
-  createPostPageEl.removeClass('hidden');
-});
-
-
-
-
-
 
 let code_block = "";
 
@@ -31,7 +20,6 @@ async function newPostHandler(event) {
     },
   });
   if (response.ok) {
-    //document.location.push();
     document.location.replace('/');
 
   } else {
@@ -70,5 +58,7 @@ const cancel = async () => {
     document.location.replace('/');
   } 
 };
+
+
 
 document.querySelector('#cancelButton').addEventListener('click', cancel);
