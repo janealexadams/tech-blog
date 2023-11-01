@@ -1,7 +1,6 @@
 <div id="posts">
     {{#each posts as |post|}}
     <div class="card" style="max-width: 40em;">
-
       <div class="card-image">
         <figure class="image is-2by1">
           <img src="{{post.code_block}}" alt="Placeholder image">
@@ -10,13 +9,13 @@
       <div class="card-content">
         <div class="media">
           <div class="media-content">
+            {{#if post.user_id}}
             <h5 class="card-title title is-4">{{post.title}} 
                 <svg id="like-button" class="likeButton" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
-  <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
-</svg>
-                <div id="like-counter" class="like">{{post.likes}}</div>
+                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                </svg>
+                <div id="like-counter" class="likeCounter">{{post.likes}}</div>
             </h5>
-
             <p class="title is-6">
             {{#if post.user_id}}
             <a>Created by {{post.user.name}} on {{format_date post.date_created}}</a>
@@ -50,16 +49,23 @@
               {{#delete_post user_id ../userId}}
               <button class="button is-info btn-delete" id="deleteButton" data-postid={{post.id}}>Delete Post</button>
               {{/delete_post}}
-              {{!-- added for update post button --}}
+               {{!-- update post button
               {{#update_post user_id ../userId}}
               <button class="button is-info btn-update" id="updateButton" data-postid={{post.id}}>Update Post</button>
-              {{/update_post}}
+              {{/update_post}} --}}
             </div>
           </div>
         </nav>
       </div>
     </article>
+    {{else}}
+    Deleted user
+    {{/if}}
     {{/each}}
+      <script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"></script>
     <script src="./js/comment.js"></script>
 </div>
 

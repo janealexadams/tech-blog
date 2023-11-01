@@ -1,3 +1,12 @@
+// when a create post button is clicked the prompt is shown
+var createPostEl = $('#createPost');
+var crea
+$('#createNewPostBtn').on('click', function () {
+  createPostEl.removeClass('hidden');
+  $('#createNewPostBtn').addClass('hidden');
+});
+
+
 
 let code_block = "";
 
@@ -62,3 +71,4 @@ const cancel = async () => {
 
 
 document.querySelector('#cancelButton').addEventListener('click', cancel);
+

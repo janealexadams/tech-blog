@@ -38,7 +38,6 @@ router.delete('/:id', async (req, res) => {
 });
 
 // update post
-// i added - need to check
 // router.put(':id', (req, res) => {
 //     Post.update(
 //       {
@@ -59,7 +58,6 @@ router.delete('/:id', async (req, res) => {
 //   });
 
 // update like count based on its id
-// i added this - need to check
 // router.put('/:id', (req, res) => {
 //     Post.update(
 //       {

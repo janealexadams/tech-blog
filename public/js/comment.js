@@ -67,27 +67,29 @@ document.querySelector('#posts').addEventListener('click', checkButton)
 
 
 
+
 // update like count 
-const likeButton = document.getElementsByClassName('likeButton');
-const likeCount = document.getElementsByClassName('likeCounter');
-let count = Number(likeCount.innerText);
-for (let i = 0; i < likeButton.length; i++) {
-
-    likeButton.addEventListener('click', () => {
-    count++;
-    likeCount.innerText = count;
-    });;
-  }
+// window.addEventListener("DOMContentLoaded", function(e) {
+// const likeButton = document.getElementsByClassName('likeButton');
+// const likeCount = document.getElementsByClassName('likeCounter');
+// let count = Number(likeCount.textContent);
+// console.log(likeCount);
+// for (let i = 0; i < likeButton.length; i++) {
+// // console.log(likeButton[i]);
+//     likeButton[i].addEventListener('click', () => {
+//     count++;
+//     console.log(count);
+//     likeCount.innerText = count;
+//     });;
+//   }
   
-
-for (let i = 0; i < likeCount.length; i++) {
-    let count = Number(likeCount.innerText);
-
-    likeButton.addEventListener('click', () => {
-    count++;
-    likeCount.innerText = count;
-    });;
-  }
+// const likeButton = $('.likeButton')
+//   likeButton.on("click", function() { 
+//     console.log($(this))
+//       var likeCount = $(this).siblings(".likeCounter").text();
+//       console.log(likeCount);
+//       count++
+//   });
 
 
 // add a comment

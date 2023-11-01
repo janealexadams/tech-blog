@@ -1,5 +1,4 @@
 const sequelize = require('../config/connection');
-// const { Comment, Forum, Post, User, UserForum } = require('../models');
 
 const seedComments = require('./comment-seeds');
 const seedPosts = require('./post-seeds');
