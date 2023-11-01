@@ -24,7 +24,7 @@ The code meets the below Acceptance Criteria:
 
 ## Usage
 
-Deployed website is here: https://janealexadams.github.io/weather-dashboard/
+Deployed website is here: https://git.heroku.com/dreadful-dungeon-10044.git
 
 Website screenshot below. 
 ![Tech Blog](assets/website-screenshot.png)
