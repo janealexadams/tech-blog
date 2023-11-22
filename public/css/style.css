@@ -1,20 +1,27 @@
 * {
-    font-family: 'Lato', sans-serif;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'DM Sans', sans-serif;
 }
 
 #headerTitle {
     color: rgb(75, 103, 186);
     font-size: 40px;
-    margin-left: 20px;
-    display: block;
+    /* margin-left: 20px; */
+    /* display: block; */
 }
 
 .nav-item {
-    display: block;
+    display: flex;
+    justify-content: center;
+    /* align-items: center;
     margin-left: 50px;
-    margin-top: -15px;
+    margin-top: -15px; */
     font-size: 18px;
+}
+
+.form-switch {
+    /* display: flex;
+    justify-content: flex-end; */
+    float: right;
 }
 
 .navbar {
@@ -208,6 +215,10 @@
 .createPostTitle {
     margin-top: 20px;
     font-size: 30px;
+}
+
+body {
+    margin-bottom: 15px;
 }
 
 /* #signinForm {

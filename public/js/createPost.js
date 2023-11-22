@@ -69,6 +69,5 @@ const cancel = async () => {
 };
 
 
-
 document.querySelector('#cancelButton').addEventListener('click', cancel);
 
