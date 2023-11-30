@@ -1,41 +1,73 @@
 * {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Roboto Mono', monospace !important;
+    /* background-color: #EEECE7; */
 }
 
-#headerTitle {
-    color: rgb(75, 103, 186);
-    font-size: 40px;
-    /* margin-left: 20px; */
-    /* display: block; */
+body {
+    margin-bottom: 15px;
+    background-color: #EEECE7;
 }
 
-.nav-item {
-    display: flex;
-    justify-content: center;
-    /* align-items: center;
-    margin-left: 50px;
-    margin-top: -15px; */
-    font-size: 18px;
-}
-
-.form-switch {
-    /* display: flex;
-    justify-content: flex-end; */
-    float: right;
+/* navbar */
+.button {
+    background-color: #568EA3;
+    font-weight: 600;
+    margin-left: 10px;
 }
 
 .navbar {
-    background-color: rgb(217, 217, 217) !important;
-    height: 105px;
-    display: block;
+    background-color: #EEECE7 !important;
+    font-weight: 600;
+}
+
+.navbar-item {
+    color: #221E22 !important;
+}
+
+.navbar-item, .navbar-link {
+    padding: 0rem !important;
+}
+
+.logo {
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.button:hover {
     font-weight: 900;
+    transform: scale(1.1);
 }
 
-.nav-link {
-    font-weight: bold;
+.navbar-item img {
+    max-height: 70px;
 }
 
-#signupForms {
+
+.navbar-menu {
+    background-color: #EEECE7;
+    box-shadow: none;
+    padding: none;
+}
+
+.navbar-burger {
+    height: 100px !important;
+}
+
+
+
+
+
+
+
+/* login and signup */
+
+/* #signupForms {
+    display: flex;
+    position: relative;
+
+} */
+
+/* #signupForms {
     margin-top: 100px;
     display: flex;
     flex-wrap: wrap;
@@ -44,7 +76,7 @@
     margin-left: 150px;
     padding: 10px; 
     line-height: 30px;
-}
+} */
 
 #signinButton {
     color: rgb(75, 103, 186);
@@ -60,6 +92,7 @@
     font-weight: bold;
 }
 
+/* create post page */
 #createNewPostBtn {
     color: rgb(75, 103, 186);
     background-color: rgb(217, 217, 217); 
@@ -72,13 +105,20 @@
     margin-right: auto;
 }
 
+
+/* home page */
 #commentButton {
+    background-color: #568EA3;
+    font-weight: 600;
+}
+
+/* #commentButton {
     color: rgb(75, 103, 186);
     background-color: rgb(217, 217, 217); 
     border: rgb(217, 217, 217);
     font-weight: bold;
 
-}
+} */
 
 #submitButton {
     color: rgb(75, 103, 186);
@@ -217,9 +257,7 @@
     font-size: 30px;
 }
 
-body {
-    margin-bottom: 15px;
-}
+
 
 /* #signinForm {
     border: solid rgb(152, 61, 152);
