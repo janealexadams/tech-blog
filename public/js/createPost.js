@@ -6,7 +6,11 @@ $('#createNewPostBtn').on('click', function () {
   $('#createNewPostBtn').addClass('hidden');
 });
 
-
+// darkmode
+$('.dark').on('click', function darkMode () {
+  var element = document.body;
+  element.classList.toggle("dark-mode");
+});
 
 let code_block = "";
 

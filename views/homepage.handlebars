@@ -9,35 +9,52 @@
       <div class="card-content">
         <div class="media">
           <div class="media-content">
+            {{!-- {{#if post.user_id}}
+            <h5 class="card-title title is-4">{{post.title}} 
+                <svg id="like-button" class="likeButton" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                </svg>
+                <div id="like-counter" class="likeCounter">{{post.likes}}</div>
+            </h5> --}}
+            {{!-- <p class="title is-6">
             {{#if post.user_id}}
+            <a class="created">Created by {{post.user.name}} on {{format_date post.date_created}}</a>
+            {{else}}
+            Deleted user
+            {{/if}}
+            </p>  --}}
+          </div>
+        </div>
+        <div class="content"> 
+               {{#if post.user_id}}
             <h5 class="card-title title is-4">{{post.title}} 
                 <svg id="like-button" class="likeButton" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
                 </svg>
                 <div id="like-counter" class="likeCounter">{{post.likes}}</div>
             </h5>
-            <p class="title is-6">
+                      <p class="title is-6">
             {{#if post.user_id}}
-            <a>Created by {{post.user.name}} on {{format_date post.date_created}}</a>
+            <p class="created">Created by {{post.user.name}} on {{format_date post.date_created}}</p>
             {{else}}
             Deleted user
             {{/if}}
             </p> 
-          </div>
-        </div>
-        <div class="content"> 
+            <p>
+            </p>
           {{post.text}}
+          
         </div>
         <hr class="line">
         <p class="comments">Comments:</p>
         {{#each post.comments as |comment|}}
-        <p class="comment-text" data-id='{{comment.id}}'><strong>{{comment.user.name}}</strong>&nbsp {{comment.text}} {{{check_id ../../userId comment.user_id}}}</p>
+        <p class="comment-text" data-id='{{comment.id}}'><strong class="commenter">{{comment.user.name}}</strong>&nbsp {{comment.text}} {{{check_id ../../userId comment.user_id}}}</p>
         {{/each}}   
       </div>
     </div>
     <article class="media" style="max-width: 40em;">
-      <div class="media-content">
-        <div class="field">
+      <div class="media-content ">
+        <div class="field comment-card">
           <p class="control">
            <textarea class="textarea" id="new-comment-{{post.id}}" placeholder="Add a comment..."></textarea>
           </p>

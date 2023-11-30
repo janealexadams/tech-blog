@@ -3,29 +3,101 @@
     /* background-color: #EEECE7; */
 }
 
+html {
+    background-color: transparent;
+    /* background-color: none; */
+}
+
 body {
     margin-bottom: 15px;
     background-color: #EEECE7;
 }
 
+.dark-mode {
+    background-color: rgb(26,26,36) !important;
+    color: white;
+}
+
+
+
+/* toggle */
+
+.toggle {
+
+}
+
+
+input[type=checkbox]{
+    height: 0;
+    width: 0;
+    visibility: hidden;
+  }
+  
+  label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 50px;
+    height: 25px;
+    background: rgb(26,26,36);
+    display: block;
+    border-radius: 100px;
+    position: relative;
+  }
+  
+  label:after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 5px;
+    width: 19px;
+    height: 19px;
+    background: #fff;
+    border-radius: 90px;
+    transition: 0.3s;
+  }
+  
+  input:checked + label {
+    background: #568EA3;
+  }
+  
+  input:checked + label:after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+  }
+  
+  label:active:after {
+    width: 32.5px;
+  }
+  
+
+  /* body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }  */
+
+
+
+
 /* navbar */
+
+
 .button {
     background-color: #568EA3;
     font-weight: 600;
     margin-left: 10px;
+    border: none;
+    color: black;
+}
+
+.hide {
+    display: none !important;
 }
 
 .navbar {
-    background-color: #EEECE7 !important;
+    background-color: transparent !important;
     font-weight: 600;
-}
-
-.navbar-item {
-    color: #221E22 !important;
-}
-
-.navbar-item, .navbar-link {
-    padding: 0rem !important;
 }
 
 .logo {
@@ -36,6 +108,7 @@ body {
 .button:hover {
     font-weight: 900;
     transform: scale(1.1);
+    color: black;
 }
 
 .navbar-item img {
@@ -44,9 +117,8 @@ body {
 
 
 .navbar-menu {
-    background-color: #EEECE7;
+    /* background-color: #EEECE7; */
     box-shadow: none;
-    padding: none;
 }
 
 .navbar-burger {
@@ -56,123 +128,24 @@ body {
 
 
 
-
-
-
 /* login and signup */
-
-/* #signupForms {
-    display: flex;
-    position: relative;
-
-} */
-
-/* #signupForms {
-    margin-top: 100px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    position: relative;
-    margin-left: 150px;
-    padding: 10px; 
-    line-height: 30px;
-} */
-
-#signinButton {
-    color: rgb(75, 103, 186);
-    background-color: rgb(217, 217, 217); 
-    border: rgb(217, 217, 217);
-    font-weight: bold;
-}
-
-#signupButton {
-    color: rgb(75, 103, 186);
-    background-color: rgb(217, 217, 217); 
-    border: rgb(217, 217, 217);
-    font-weight: bold;
-}
-
-/* create post page */
-#createNewPostBtn {
-    color: rgb(75, 103, 186);
-    background-color: rgb(217, 217, 217); 
-    border: rgb(217, 217, 217);
-    font-weight: bold;
-    margin-top: 30px;
-    text-align: center; 
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-/* home page */
-#commentButton {
+#signinButton, #signupButton {
     background-color: #568EA3;
     font-weight: 600;
+    color: white;
+    margin-top: 10px;
 }
 
-/* #commentButton {
-    color: rgb(75, 103, 186);
-    background-color: rgb(217, 217, 217); 
-    border: rgb(217, 217, 217);
-    font-weight: bold;
-
-} */
-
-#submitButton {
-    color: rgb(75, 103, 186);
-    background-color: rgb(217, 217, 217); 
-    border: rgb(217, 217, 217);
-    font-weight: bold;
-    margin-left: 60px;
+.signinTitle {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 900
 }
 
-#deleteButton {
-    color: rgb(75, 103, 186);
-    background-color: rgb(217, 217, 217); 
-    border: rgb(217, 217, 217);
-    margin-left: 5px;
-    font-weight: bold;
-}
 
-#updateButton {
-    color: rgb(75, 103, 186);
-    background-color: rgb(217, 217, 217); 
-    border: rgb(217, 217, 217);
-    margin-left: 5px;
-    font-weight: bold;
-}
-
-#cancelButton {
-    color: rgb(75, 103, 186);
-    background-color: rgb(217, 217, 217); 
-    border: rgb(217, 217, 217);
-    font-weight: bold;
-}
-
-#upload_widget {
-    color: rgb(75, 103, 186);
-    background-color: rgb(217, 217, 217); 
-    border: rgb(217, 217, 217);
-    margin-left: 95px;
-    font-weight: bold;
-}
-
-.card {
-    margin-top: 65px;
-    background-color: white;
-}
-
-#posts {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.media {
-    width: 1000px;
+.signinContainer {
+    margin: auto !important;
+    padding-top: 50px;
 }
 
 .createPostTitle {
@@ -189,9 +162,118 @@ body {
     margin-right: auto;
 }
 
-.file-label {
-    color: black;
-    margin: 10px; 
+#noAccountBtn, .hasAccountBtn {
+    font-size: 12px;
+}
+
+#special {
+    font-size: 10px;
+}
+
+
+/* create post page */
+#createNewPostBtn {
+    margin-top: 50px;
+    text-align: center; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+    background-color: #568EA3;
+    font-weight: 600;
+    color: white;
+}
+
+
+#upload_widget {
+    margin-top: 10px;
+    text-align: center; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+    margin-bottom: 10px;
+    background-color: #568EA3;
+    font-weight: 600;
+    color: white;
+}
+
+
+.createPostTitle {
+    margin-top: 20px;
+    font-size: 30px;
+} 
+
+
+#submitButton {
+    background-color: #568EA3;
+    font-weight: 600;
+    color: white;
+    font-weight: bold;
+    margin-left: 60px;
+}
+
+#cancelButton {
+    background-color: #568EA3;
+    font-weight: 600;
+    color: white;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* home page */
+.level {
+    background-color: transparent !important;
+}
+
+#commentButton {
+    background-color: #568EA3;
+    font-weight: 600;
+} 
+
+.card {
+    margin-top: 65px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+ #deleteButton {
+    background-color: #568EA3;
+    font-weight: 600;
+    margin-left: 15px;
+} 
+
+.media-content {
+    background-color: transparent;
+} 
+
+.title {
+    background-color: white;
+}
+
+.card-title, .created, .content, .comments, .comment-text, .commenter {
+    background-color: #ffffff !important;
+}
+
+.created {
+    margin-bottom: 25px !important;
+    color: rgb(49, 92, 184);
+    font-weight: 900;
+}
+
+.comment-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#posts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.media {
+    width: 1000px;
 }
 
 .line {
@@ -206,20 +288,12 @@ body {
     margin-top: 3px;
 }
 
-.label {
-    margin-left: 125px;
-}
-
 .delete {
     display: none;
 }
   
 .comment-text:hover > .delete {
     display: inline;
-}
-
-.hidden {
-    display: none !important;
 }
 
 #like-button {
@@ -238,48 +312,15 @@ body {
     font-weight: bold;
 }
 
-.navbar-toggler-icon {
-    width: 20px;
-    height: 25px;
+.update {
+    display: none !important;
 }
 
-.navbar-toggler {
-    margin-left: 15px;
-}
-
-.navbar-collapse {
-    margin-top: 10px;
-    margin-left: -15px;
-}
-
-.createPostTitle {
-    margin-top: 20px;
-    font-size: 30px;
-}
-
-
-
-/* #signinForm {
-    border: solid rgb(152, 61, 152);
-    border-radius: 20px;
-    box-sizing: border-box;
-    width: 400px;
-    height: 270px;
-    padding: 20px; 
-}
-
-#signupForm {
-    border: solid rgb(152, 61, 152);
-    border-radius: 20px;
-    box-sizing: border-box;
-    width: 400px;
-    height: 340px;
-    padding: 20px; 
+/* haven't added this feature
+#updateButton {
+    color: rgb(75, 103, 186);
+    background-color: rgb(217, 217, 217); 
+    border: rgb(217, 217, 217);
+    margin-left: 5px;
+    font-weight: bold;
 } */
-
-/* #navbarNav { 
-    justify-content: flex-end;
-    margin-right: 30px;
-    display: block; 
-    font-weight: 900; 
-}  */

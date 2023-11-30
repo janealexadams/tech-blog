@@ -1,3 +1,29 @@
+// sign in vs sign up
+var firstContainer = $('.firstContainer');
+var secondContainer = $('.secondContainer');
+$('#noAccountBtn').on('click', function () {
+  secondContainer.removeClass('hidden');
+  firstContainer.addClass('hidden');
+});
+
+var firstContainer = $('.firstContainer');
+var secondContainer = $('.secondContainer');
+// var hasAccountBtn = $('.hasAccountBtn')
+$('.hasAccountBtn').on('click', function () {
+  secondContainer.addClass('hidden');
+  firstContainer.removeClass('hidden');
+});
+
+// darkmode
+$('.dark').on('click', function darkMode () {
+  var element = document.body;
+  element.classList.toggle("dark-mode");
+  var whiteLogo = $('.whiteLogo');
+var blackLogo = $('.whiteLogo');
+  blackLogo.addClass('hide');
+  whiteLogo.removeClass('hide');
+});
+
 const loginFormHandler = async (event) => {
     event.preventDefault();
   
