@@ -114,6 +114,7 @@ input[type=checkbox]{
 .navbar-menu {
     /* background-color: #EEECE7; */
     box-shadow: none;
+    background-color: transparent;
 }
 
 .navbar-burger {
