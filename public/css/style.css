@@ -22,11 +22,6 @@ body {
 
 /* toggle */
 
-.toggle {
-
-}
-
-
 input[type=checkbox]{
     height: 0;
     width: 0;
@@ -153,6 +148,7 @@ input[type=checkbox]{
 }
 
 #createPost {
+    margin-top: 0px;
     display: flex;
     flex-direction: column;
     align-items: center;  
@@ -160,6 +156,10 @@ input[type=checkbox]{
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 10px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 15px;
 }
 
 #noAccountBtn, .hasAccountBtn {

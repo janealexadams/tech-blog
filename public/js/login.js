@@ -15,14 +15,23 @@ $('.hasAccountBtn').on('click', function () {
 });
 
 // darkmode
-$('.dark').on('click', function darkMode () {
+$('.dark').on('click', function  () {
   var element = document.body;
   element.classList.toggle("dark-mode");
-  var whiteLogo = $('.whiteLogo');
-var blackLogo = $('.whiteLogo');
-  blackLogo.addClass('hide');
-  whiteLogo.removeClass('hide');
-});
+  
+      var image_1 = $(".logo");
+      var img1_src = "https://res.cloudinary.com/deqzppd4t/image/upload/v1701293667/T_7_gbabdh.png";
+      var img2_src = "https://res.cloudinary.com/deqzppd4t/image/upload/v1701382022/T_9_kmt8mm.png";
+        
+      if (image_1.attr("src") == img1_src) {
+          
+          image_1.attr("src", img2_src);
+        } else {
+          image_1.attr("src", img1_src);
+        }
+    });
+  
+  
 
 const loginFormHandler = async (event) => {
     event.preventDefault();
