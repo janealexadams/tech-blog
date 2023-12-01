@@ -1,11 +1,9 @@
 * {
     font-family: 'Roboto Mono', monospace !important;
-    /* background-color: #EEECE7; */
 }
 
 html {
     background-color: transparent;
-    /* background-color: none; */
 }
 
 body {
@@ -19,9 +17,7 @@ body {
 }
 
 
-
 /* toggle */
-
 input[type=checkbox]{
     height: 0;
     width: 0;
@@ -63,21 +59,9 @@ input[type=checkbox]{
   label:active:after {
     width: 32.5px;
   }
-  
-
-  /* body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }  */
-
-
 
 
 /* navbar */
-
-
 .button {
     background-color: #568EA3;
     font-weight: 600;
@@ -110,9 +94,7 @@ input[type=checkbox]{
     max-height: 70px;
 }
 
-
 .navbar-menu {
-    /* background-color: #EEECE7; */
     box-shadow: none;
     background-color: transparent;
 }
@@ -120,8 +102,6 @@ input[type=checkbox]{
 .navbar-burger {
     height: 100px !important;
 }
-
-
 
 
 /* login and signup */
@@ -137,7 +117,6 @@ input[type=checkbox]{
     font-size: 18px;
     font-weight: 900
 }
-
 
 .signinContainer {
     margin: auto !important;
@@ -184,7 +163,6 @@ input[type=checkbox]{
     color: white;
 }
 
-
 #upload_widget {
     margin-top: 10px;
     text-align: center; 
@@ -197,12 +175,10 @@ input[type=checkbox]{
     color: white;
 }
 
-
 .createPostTitle {
     margin-top: 20px;
     font-size: 30px;
 } 
-
 
 #submitButton {
     background-color: #568EA3;
@@ -317,11 +293,3 @@ input[type=checkbox]{
     display: none !important;
 }
 
-/* haven't added this feature
-#updateButton {
-    color: rgb(75, 103, 186);
-    background-color: rgb(217, 217, 217); 
-    border: rgb(217, 217, 217);
-    margin-left: 5px;
-    font-weight: bold;
-} */
