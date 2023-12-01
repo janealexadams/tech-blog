@@ -14,13 +14,14 @@ async function checkButton(event) {
 
 
 // darkmode
+
 $('.dark').on('click', function  () {
 var element = document.body;
 element.classList.toggle("dark-mode");
 
     var image_1 = $(".logo");
-    var img1_src = "https://res.cloudinary.com/deqzppd4t/image/upload/v1701293667/T_7_gbabdh.png";
-    var img2_src = "https://res.cloudinary.com/deqzppd4t/image/upload/v1701382022/T_9_kmt8mm.png";
+    var img1_src = "https://res.cloudinary.com/deqzppd4t/image/upload/v1701382022/T_9_kmt8mm.png";
+    var img2_src = "https://res.cloudinary.com/deqzppd4t/image/upload/v1701293667/T_7_gbabdh.png";
       
     if (image_1.attr("src") == img1_src) {
         
@@ -29,7 +30,6 @@ element.classList.toggle("dark-mode");
         image_1.attr("src", img1_src);
       }
   });
-
 
 
 
