@@ -14,7 +14,6 @@ async function checkButton(event) {
 
 
 // darkmode
-
 $('.dark').on('click', function  () {
 var element = document.body;
 element.classList.toggle("dark-mode");
@@ -117,7 +116,6 @@ const likeButton = $('.likeButton')
       console.log(likeCount);
       likeCount++
       $(this).siblings(".likeCounter").text(likeCount);
-    //   count++
   });
 
 

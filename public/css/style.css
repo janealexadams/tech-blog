@@ -67,6 +67,10 @@ input[type=checkbox]{
     color: #568EA3;
 }
 
+.navbar-burger {
+    color: #568EA3;
+}
+
 a:hover {
     background-color: transparent !important;
 }
@@ -289,17 +293,36 @@ a:hover {
 #like-button {
     display: inline-block;
     position: absolute;
-    right: 30px;
+    right: 40px;
+    cursor: pointer;
 }
+
+#like-button:hover {
+    transform: scale(1.2);
+}
+
 
 #like-counter {
     display: inline-block;
+    text-align: center;
+    vertical-align: middle;
     font-size: 15px;
     position: absolute;
-    right: 38px;
-    padding-top: 3px;
-    color: white;
-    font-weight: bold;
+    right: 75px;
+    padding-top: 35px; 
+    color: rgb(0, 0, 0);
+    font-weight: 900;
+    cursor: pointer;
+    font-family: 'Roboto Mono', monospace !important;
+
+}
+
+.likeAmount {
+    float: right;
+    margin-top: 35px;
+    font-size: 15px;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
 }
 
 .update {
