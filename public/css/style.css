@@ -213,7 +213,7 @@ a:hover {
 }
 
 /* home page */
-.level {
+/* .level {
     background-color: transparent !important;
 }
 
@@ -321,4 +321,76 @@ a:hover {
 .update {
     display: none !important;
 }
+ */
 
+
+/* .like-counter {
+    display: inline-block
+} */
+
+/* .like-amount {
+    display: inline-block;
+}  */
+
+/* .like-button {
+    display: inline-block;
+    float: right;
+}  */
+
+/* .title {
+    display: inline-block;
+    float: left;
+} */
+
+.like-amount {
+    padding-left: 7px;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    font-weight: 900;
+    cursor: pointer;
+    font-family: 'Roboto Mono', monospace !important;
+}
+
+.like-counter {
+    padding-left: 4px;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    font-weight: 900;
+    cursor: pointer;
+    font-family: 'Roboto Mono', monospace !important;
+}
+
+#like-button:hover {
+    transform: scale(1.2);
+}
+
+#comment-button {
+    background-color: #568EA3;
+    font-weight: 600;
+    font-size: 15px;
+} 
+
+.card {
+    margin-top: 65px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+ #delete-button {
+    background-color: #568EA3;
+    font-weight: 600;
+    margin-left: 15px;
+    font-size: 15px;
+} 
+
+.update {
+    display: none !important;
+}
+
+#like-button:hover {
+    transform: scale(1.2);
+}
+
+.comment-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

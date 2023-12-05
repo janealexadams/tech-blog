@@ -1,61 +1,67 @@
+
+
+
+
+
+<div class="columns is-mobile is-centered">
+<div class="column is-half">
 <div id="posts">
     {{#each posts as |post|}}
-    <div class="card" style="max-width: 40em;">
+    <div id="posts">
+      <div class="card">
       <div class="card-image">
         <figure class="image is-2by1">
           <img src="{{post.code_block}}" alt="Placeholder image">
         </figure>
       </div>
       <div class="card-content">
-        <div class="content"> 
+        <div class="media">
+          <div class="media-content">
             {{#if post.user_id}}
-            <h5 class="card-title title is-4">{{post.title}} 
-              <svg id="like-button" class="like-button" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="red" class="bi bi-suit-heart-fill" viewBox="0 0 16 16">
+            <p class="title is-4">{{post.title}} </p>
+            {{!-- likes --}}
+          </div>
+                <svg id="like-button" class="like-button" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="red" class="bi bi-suit-heart-fill" viewBox="0 0 16 16">
                 <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1"/>
               </svg>
               <div id="like-counter" class="like-counter">{{post.likes}}</div>
-              <p class="like-amount">likes</p>
-            </h5>
-            <p class="title is-6">
+              <p class="like-amount"> likes</p>
+        </div>
+        <div class="content">
               {{#if post.user_id}}
-              <p class="created">Created by {{post.user.name}} on {{format_date post.date_created}}</p>
+              <p class="subtitle is-6">Created by {{post.user.name}} on {{format_date post.date_created}}</p>
               {{else}}
               Deleted user
               {{/if}}
-            </p> 
-          {{post.text}}
+          {{post.text}} 
+          <br>
         </div>
-        <hr class="line">
-        <p class="comments">Comments:</p>
+      <hr class="line">
+      <p class="comments">Comments:</p>
         {{#each post.comments as |comment|}}
         <p class="comment-text" data-id='{{comment.id}}'><strong class="commenter">{{comment.user.name}}</strong>&nbsp {{comment.text}} {{{check_id ../../userId comment.user_id}}}</p>
         {{/each}}   
+
       </div>
     </div>
-    <article class="media" style="max-width: 40em;">
-      <div class="media-content ">
-        <div class="field comment-card">
-          <p class="control">
-           <textarea class="textarea" id="new-comment-{{post.id}}" placeholder="Add a comment..."></textarea>
-          </p>
-        </div>
-        <nav class="level">
-          <div class="level-left">
-            <div class="level-item">
-              <button class="button is-info btn-submit " id="comment-button" data-postid={{post.id}}>Comment</button>
-              {{#delete_post user_id ../userId}}
-              <button class="button is-info btn-delete" id="delete-button" data-postid={{post.id}}>Delete Post</button>
-              {{/delete_post}}
-            </div>
-          </div>
-        </nav>
-      </div>
-    </article>
+  </div>
+    {{!-- comment section --}}
+  <div class="field comment-card">
+    <p class="control">
+      <textarea class="textarea" id="new-comment-{{post.id}}" placeholder="Add a comment..."></textarea>
+    </p>
+  </div>
+  <div class="level-item">
+    <button class="button is-info btn-submit " id="comment-button" data-postid={{post.id}}>Comment</button>
+    {{#delete_post user_id ../userId}}
+    <button class="button is-info btn-delete" id="delete-button" data-postid={{post.id}}>Delete Post</button>
+    {{/delete_post}}
+  </div>
     {{else}}
     Deleted user
     {{/if}}
     {{/each}}
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="./js/comment.js"></script>
-</div>
-
+  </div>
+</div> 
