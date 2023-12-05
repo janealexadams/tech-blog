@@ -1,16 +1,32 @@
-// when a create post button is clicked the prompt is shown
-var createPostEl = $('#createPost');
-var crea
-$('#createNewPostBtn').on('click', function () {
-  createPostEl.removeClass('hidden');
-  $('#createNewPostBtn').addClass('hidden');
+// toggle navbar 
+document.addEventListener('DOMContentLoaded', () => {
+
+  // get all "navbar-burger" elements
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  // add a click event on each of them
+  $navbarBurgers.forEach( el => {
+    el.addEventListener('click', () => {
+
+      // get the target from the "data-target" attribute
+      const target = el.dataset.target;
+      const $target = document.getElementById(target);
+
+      // toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+      el.classList.toggle('is-active');
+      $target.classList.toggle('is-active');
+    });
+  });
 });
 
 // darkmode
-$('.dark').on('click', function  () {
+$('.theme-switch').on('click', function  () {
+
+  // background
   var element = document.body;
-  element.classList.toggle("dark-mode");
+  element.classList.toggle("light-mode");
   
+  // logo change
       var image_1 = $(".logo");
       var img1_src = "https://res.cloudinary.com/deqzppd4t/image/upload/v1701382022/T_9_kmt8mm.png";
       var img2_src = "https://res.cloudinary.com/deqzppd4t/image/upload/v1701293667/T_7_gbabdh.png";
@@ -21,10 +37,18 @@ $('.dark').on('click', function  () {
         } else {
           image_1.attr("src", img1_src);
         }
-    });
-  
-  
+  });
 
+// create post button
+var createPostEl = $('#createPost');
+var crea
+$('#createNewPostBtn').on('click', function () {
+  createPostEl.removeClass('hidden');
+  $('#createNewPostBtn').addClass('hidden');
+});
+
+
+// create new post
 let code_block = "";
 
 async function newPostHandler(event) {
@@ -32,7 +56,6 @@ async function newPostHandler(event) {
   const title = document.querySelector('#post-title').value.trim();
   console.log(title);
   const text = document.querySelector('.textarea').value.trim();
-  
 
   const response = await fetch(`/api/posts`, {
     method: 'POST',
@@ -53,8 +76,7 @@ async function newPostHandler(event) {
   }
 }
 
-document.querySelector("#submitButton").addEventListener('click', newPostHandler);
-
+// cloudinary upload
 var myWidget = cloudinary.createUploadWidget({
   cloudName: 'deqzppd4t',
   uploadPreset: 'ftr9mywz'
@@ -65,9 +87,7 @@ var myWidget = cloudinary.createUploadWidget({
     const previewImage = document.getElementById ("previewImage");
     previewImage.setAttribute ("src", code_block)
   }
-}
-)
-
+})
 
 document.getElementById("upload_widget").addEventListener("click", function (event) {
   event.preventDefault();
@@ -85,6 +105,7 @@ const cancel = async () => {
   } 
 };
 
-
+document.querySelector("#submitButton").addEventListener('click', newPostHandler);
 document.querySelector('#cancelButton').addEventListener('click', cancel);
+
 

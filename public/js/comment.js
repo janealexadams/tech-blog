@@ -1,3 +1,45 @@
+// toggle navbar 
+document.addEventListener('DOMContentLoaded', () => {
+
+    // get all "navbar-burger" elements
+    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+  
+    // add a click event on each of them
+    $navbarBurgers.forEach( el => {
+      el.addEventListener('click', () => {
+  
+        // get the target from the "data-target" attribute
+        const target = el.dataset.target;
+        const $target = document.getElementById(target);
+  
+        // toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+        el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+      });
+    });
+});
+
+// darkmode
+$('.theme-switch').on('click', function  () {
+
+    // background
+    var element = document.body;
+    element.classList.toggle("light-mode");
+    
+    // logo change
+        var image_1 = $(".logo");
+        var img1_src = "https://res.cloudinary.com/deqzppd4t/image/upload/v1701382022/T_9_kmt8mm.png";
+        var img2_src = "https://res.cloudinary.com/deqzppd4t/image/upload/v1701293667/T_7_gbabdh.png";
+          
+        if (image_1.attr("src") == img1_src) {
+            
+            image_1.attr("src", img2_src);
+          } else {
+            image_1.attr("src", img1_src);
+          }
+    });
+    
+// delete / comment on posts 
 async function checkButton(event) {
     if (event.target.classList.contains('btn-submit')) {
         commentFormHandler(event.target);
@@ -10,32 +52,7 @@ async function checkButton(event) {
     }
 };
 
-
-
-
-// darkmode
-$('.dark').on('click', function  () {
-var element = document.body;
-element.classList.toggle("dark-mode");
-
-    var image_1 = $(".logo");
-    var img1_src = "https://res.cloudinary.com/deqzppd4t/image/upload/v1701382022/T_9_kmt8mm.png";
-    var img2_src = "https://res.cloudinary.com/deqzppd4t/image/upload/v1701293667/T_7_gbabdh.png";
-      
-    if (image_1.attr("src") == img1_src) {
-        
-        image_1.attr("src", img2_src);
-      } else {
-        image_1.attr("src", img1_src);
-      }
-  });
-
-
-
-
-
-
-
+// comment on post
 async function commentFormHandler(button) {
     const post_id = parseInt(button.getAttribute("data-postid"));
     const text = document.querySelector('#new-comment-'+post_id).value.trim();
@@ -87,38 +104,6 @@ async function deletePostHandler(button) {
     }
 }
 
-document.querySelector('#posts').addEventListener('click', checkButton)
-
-
-
-
-
-// update like count 
-// window.addEventListener("DOMContentLoaded", function(e) {
-// const likeButton = document.getElementsByClassName('likeButton');
-// const likeCount = document.getElementsByClassName('likeCounter');
-// let count = Number(likeCount.textContent);
-// console.log(likeCount);
-// for (let i = 0; i < likeButton.length; i++) {
-// // console.log(likeButton[i]);
-//     likeButton[i].addEventListener('click', () => {
-//     count++;
-//     console.log(count);
-//     likeCount.innerText = count;
-//     });;
-//   }
-// })
-  
-const likeButton = $('.likeButton')
-  likeButton.on("click", function() { 
-    console.log($(this))
-      var likeCount = $(this).siblings(".likeCounter").text();
-      console.log(likeCount);
-      likeCount++
-      $(this).siblings(".likeCounter").text(likeCount);
-  });
-
-
 // add a comment
 async function commentFormHandler(button) {
     const post_id = parseInt(button.getAttribute("data-postid"));
@@ -144,26 +129,15 @@ async function commentFormHandler(button) {
     }
 }
 
+// like button
+const likeButton = $('.like-button')
+  likeButton.on("click", function() { 
+    console.log($(this))
+      var likeCount = $(this).siblings(".like-counter").text();
+      console.log(likeCount);
+      likeCount++
+      $(this).siblings(".like-counter").text(likeCount);
+});
 
-// for toggle navbar on homepage
-document.addEventListener('DOMContentLoaded', () => {
 
-    // Get all "navbar-burger" elements
-    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-  
-    // Add a click event on each of them
-    $navbarBurgers.forEach( el => {
-      el.addEventListener('click', () => {
-  
-        // Get the target from the "data-target" attribute
-        const target = el.dataset.target;
-        const $target = document.getElementById(target);
-  
-        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-        el.classList.toggle('is-active');
-        $target.classList.toggle('is-active');
-  
-      });
-    });
-  
-  });
+document.querySelector('#posts').addEventListener('click', checkButton)

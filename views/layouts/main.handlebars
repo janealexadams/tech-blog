@@ -3,7 +3,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>The Tech Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tech Blog</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,65 +13,53 @@
 
 <body>
   <header>
-  <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a class="navbar-item" href="/">
-      <img class="logo blackLogo" id="dark myImg imgClickAndChange" src="https://res.cloudinary.com/deqzppd4t/image/upload/v1701382022/T_9_kmt8mm.png">
-    </a>
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-
-    <div id="navbarBasicExample" class="navbar-end navbar-menu">
-      <div class="navbar-item">
-
-        <div class="navbar-item toggle">
-          <input type="checkbox" class="dark" id="switch" /><label for="switch">Toggle</label>
-        </div>
-
-      <a class="navbar-item" href="/">
-        <button class="navbar-item button" href="/">
-        Dashboard
-      </button>
-      </a>
-    <a class="navbar-item" href="/post">
-          <button class="navbar-item button" href="/post">
-        Create Post
-      </button>
-    </a>
-
-      <a>
-          {{#if logged_in}}
-           <a class="navbar-item" href="#">
-              <button class="navbar-item button" id="logout" href="#">Logout</button>
-            </a>
-        {{else}}
-          <a class="navbar-item" href="/login">
-            <button class="navbar-item button" href="/login">Login</button>
-          </a>
-        {{/if}}
-      </a>
+    <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+          <img class="logo" id="dark" src="https://res.cloudinary.com/deqzppd4t/image/upload/v1701382022/T_9_kmt8mm.png">
+        </a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
       </div>
-    </div>
-  </div>
-</nav>
+      <div id="navbarBasicExample" class="navbar-end navbar-menu">
+        <div class="navbar-item">
+          <div class="navbar-item toggle">
+            <input type="checkbox" class="theme-switch" id="switch" /><label for="switch">Toggle</label>
+          </div>
+          <a class="navbar-item" href="/">
+            <button class="navbar-item button" href="/">Dashboard</button>
+          </a>
+          <a class="navbar-item" href="/post">
+            <button class="navbar-item button" href="/post">Create Post</button>
+          </a>
+          <a>
+            {{#if logged_in}}
+            <a class="navbar-item" href="#">
+                <button class="navbar-item button" id="logout" href="#">Logout</button>
+              </a>
+          {{else}}
+            <a class="navbar-item" href="/login">
+              <button class="navbar-item button" href="/login">Login</button>
+            </a>
+          {{/if}}
+          </a>
+        </div>
+      </div>
+    </nav>
   </header>
 
-
   <main>
-  {{{ body }}}
+    {{{ body }}}
   </main>
-  <script
-  src="https://code.jquery.com/jquery-3.7.1.min.js"
-  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-  crossorigin="anonymous"></script>
-  {{#if logged_in}}
-  <script src="/js/logout.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+      {{#if logged_in}}
+    <script src="/js/logout.js"></script>
     <script src="/js/comment.js"></script>
-  {{/if}}
-</body>
+      {{/if}}
+  </body>
 </html>
 
