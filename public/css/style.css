@@ -232,6 +232,10 @@ a:hover {
     transform: scale(1.2);
 }
 
+#like-button {
+    margin-left: 5px;
+}
+
 #comment-button {
     background-color: #568EA3;
     font-weight: 600;
@@ -261,6 +265,12 @@ a:hover {
 
 .comment-card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.created {
+    margin-bottom: 15px !important;
+    color: rgb(49, 92, 184);
+    font-weight: 900;
 }
 
 @media only screen and (max-width: 768px) {
