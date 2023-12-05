@@ -116,30 +116,25 @@ a:hover {
 }
 
 /* login and signup */
-#signinButton, #signupButton {
+#signin-button, #signup-button {
     background-color: #568EA3;
     font-weight: 600;
     color: white;
     margin-top: 10px;
 }
 
-.signinTitle {
+.signin-title {
     text-align: center;
     font-size: 18px;
     font-weight: 900
 }
 
-.signinContainer {
+.signin-container {
     margin: auto !important;
     padding-top: 50px;
 }
 
-.createPostTitle {
-    text-align: center;
-    padding-top: 15px;
-}
-
-#createPost {
+#create-post {
     margin-top: 100px;
     display: flex;
     flex-direction: column;
@@ -157,7 +152,7 @@ a:hover {
     border-radius: 15px;
 }
 
-#noAccountBtn, .hasAccountBtn {
+#no-account-btn, .has-account-btn {
     font-size: 12px;
 }
 
@@ -166,7 +161,7 @@ a:hover {
 }
 
 /* create post page */
-#createNewPostBtn {
+#create-new-post-btn {
     margin-top: 50px;
     text-align: center; 
     display: block;
@@ -189,12 +184,14 @@ a:hover {
     color: white;
 }
 
-.createPostTitle {
+.create-post-title {
     margin-top: 20px;
     font-size: 30px;
+    text-align: center;
+    padding-top: 15px;
 } 
 
-#submitButton {
+#submit-button {
     background-color: #568EA3;
     font-weight: 600;
     color: white;
@@ -202,7 +199,7 @@ a:hover {
     margin-left: 60px;
 }
 
-#cancelButton {
+#cancel-button {
     background-color: #568EA3;
     font-weight: 600;
     color: white;
@@ -212,136 +209,7 @@ a:hover {
     display: none !important;
 }
 
-/* home page */
-/* .level {
-    background-color: transparent !important;
-}
-
-#comment-button {
-    background-color: #568EA3;
-    font-weight: 600;
-} 
-
-.card {
-    margin-top: 65px;
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
- #delete-button {
-    background-color: #568EA3;
-    font-weight: 600;
-    margin-left: 15px;
-} 
-
-.media-content {
-    background-color: transparent;
-} 
-
-.title {
-    background-color: white;
-}
-
-.card-title, .created, .content, .comments, .comment-text, .commenter {
-    background-color: #ffffff !important;
-}
-
-.created {
-    margin-bottom: 25px !important;
-    color: rgb(49, 92, 184);
-    font-weight: 900;
-}
-
-.comment-card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-#posts {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.media {
-    width: 1000px;
-}
-
-.line {
-    border-bottom: 2px solid #888;
-  }
-
-.comments {
-    margin-bottom: 5px;
-}
-
-.comment-text {
-    margin-top: 3px;
-}
-
-.delete {
-    display: none;
-}
-  
-.comment-text:hover > .delete {
-    display: inline;
-}
-
-#like-button {
-    display: inline-block;
-    position: absolute;
-    right: 40px;
-    cursor: pointer;
-}
-
-#like-button:hover {
-    transform: scale(1.2);
-}
-
-
-#like-counter {
-    color: rgb(0, 0, 0);
-    font-size: 15px;
-    font-weight: 900;
-    cursor: pointer;
-    font-family: 'Roboto Mono', monospace !important;
-    display: inline-block;
-    margin-left: 552px;
-    font-size: 15px;
-    
-}
-
-.like-amount {
-    display: inline-block;
-    font-size: 1px;
-    font-weight: 600;
-    color: rgb(255, 255, 255);
-}
-
-.update {
-    display: none !important;
-}
- */
-
-
-/* .like-counter {
-    display: inline-block
-} */
-
-/* .like-amount {
-    display: inline-block;
-}  */
-
-/* .like-button {
-    display: inline-block;
-    float: right;
-}  */
-
-/* .title {
-    display: inline-block;
-    float: left;
-} */
-
+/* homepage */
 .like-amount {
     padding-left: 7px;
     color: rgb(0, 0, 0);
@@ -395,22 +263,3 @@ a:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-
-/* Smartphones (portrait and landscape) ----------- */
-@media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 480px) {
-/* Styles */
-}
-
-/* Smartphones (landscape) ----------- */
-@media only screen 
-and (min-width : 321px) {
-/* Styles */
-}
-
-/* Smartphones (portrait) ----------- */
-@media only screen 
-and (max-width : 320px) {
-/* Styles */
-}

@@ -37,19 +37,19 @@ $('.theme-switch').on('click', function  () {
         } else {
           image_1.attr("src", img1_src);
         }
-  });
+});
 
 // sign in vs sign up
-var firstContainer = $('.firstContainer');
-var secondContainer = $('.secondContainer');
-$('#noAccountBtn').on('click', function () {
+var firstContainer = $('.first-container');
+var secondContainer = $('.second-container');
+$('#no-account-btn').on('click', function () {
   secondContainer.removeClass('hidden');
   firstContainer.addClass('hidden');
 });
 
-var firstContainer = $('.firstContainer');
-var secondContainer = $('.secondContainer');
-$('.hasAccountBtn').on('click', function () {
+var firstContainer = $('.first-container');
+var secondContainer = $('.second-container');
+$('.has-account-btn').on('click', function () {
   secondContainer.addClass('hidden');
   firstContainer.removeClass('hidden');
 });
