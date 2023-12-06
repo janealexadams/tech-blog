@@ -185,7 +185,7 @@ a:hover {
     font-weight: 600;
     color: white;
     font-weight: bold;
-    margin-left: 60px;
+    margin-left: 45px;
 }
 
 #cancel-button {
@@ -288,82 +288,3 @@ a:hover {
         }
     }
 
-/* @media only screen and (max-width: 768px) {
-    .first-container {
-        display: block !important;
-        width: 100% !important;
-        margin-left: 0px;
-        }
-    .second-container {
-        display: block !important;
-        width: 100% !important;
-        margin-left: 0px;
-        }
-    } */
-
-/* @media only screen and (max-width: 600px) {
-    .first-container {
-        display: block !important;
-        width: 100% !important;
-        margin-left: 0px;
-        }
-    .second-container {
-        display: block !important;
-        width: 100% !important;
-        margin-left: 0px;
-        }
-    } */
-
-/* @media only screen and (max-width: 600px) {
-    .first-container {
-        display: block !important;
-        width: 100% !important;
-        }
-    }   */
-
-
-
-        /* @media only screen and (max-width: 992px) {
-            .columns {
-                display: block !important;
-                width: 200% !important;
-              }
-            }   */
-
-
-            /* @media only screen and (max-width: 1200px) { */
-                /* .columns { */
-                    /* display: block !important;
-                    width: 175% !important; */
-                    /* margin-right: 0px !important;
-                    margin-left: 0px !important;
-                    margin: none !important;
-                    display: flex !important; */
-                    /* flex-direction: column !important;  */
-                    /* align-items: center !important;   
-                    float: none;
-                    width: 100%; */
-                  }
-            
-                .is-mobile {
-                    /* display: block !important;
-                    width: 150% !important; */
-                    margin-right: none !important;
-                    margin-left: none !important;
-                    margin: none !important;
-                    /* display: flex !important;
-                    flex-direction: column !important;
-                    align-items: center !important;  */
-                  }
-                  .is-centered {
-                    /* display: block !important;
-                    width: 150% !important; */
-                    margin-right: none !important;
-                    margin-left: none !important;
-                    margin: none !important;
-                    /* display: flex !important;
-                    flex-direction: column !important;
-                    align-items: center !important;  */
-                  }
-              
-                }
