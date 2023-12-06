@@ -39,7 +39,7 @@ Post.init(
     likes: {
         type: DataTypes.INTEGER,
         allowNull: false,
-        defaultValue: 1
+        defaultValue: 0
     }
   },
   {
