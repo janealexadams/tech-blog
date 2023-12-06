@@ -56,7 +56,6 @@ async function checkButton(event) {
 async function commentFormHandler(button) {
     const post_id = parseInt(button.getAttribute("data-postid"));
     const text = document.querySelector('#new-comment-'+post_id).value.trim();
-    console.log(text,post_id);
     if (text) {
         const response = await fetch('/api/comments', {
             method: 'POST',
@@ -108,7 +107,6 @@ async function deletePostHandler(button) {
 async function commentFormHandler(button) {
     const post_id = parseInt(button.getAttribute("data-postid"));
     const text = document.querySelector('#new-comment-'+post_id).value.trim();
-    console.log(text,post_id);
     if (text) {
         const response = await fetch('/api/comments', {
             method: 'POST',
@@ -132,11 +130,9 @@ async function commentFormHandler(button) {
 // like button
 const likeButton = $('.like-button')
   likeButton.on("click", function() { 
-    console.log($(this))
-      var likeCount = $(this).siblings(".like-counter").text();
-      console.log(likeCount);
-      likeCount++
-      $(this).siblings(".like-counter").text(likeCount);
+    var likeCount = $(this).siblings(".like-counter").text();
+    likeCount++
+    $(this).siblings(".like-counter").text(likeCount);
 });
 
 

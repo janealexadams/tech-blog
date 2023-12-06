@@ -1,28 +1,9 @@
-// toggle navbar 
-(function () {
-  var burger = document.querySelector('.burger');
-  var menu = document.querySelector('#' + burger.dataset.target);
-  burger.addEventListener('click', function () {
-      burger.classList.toggle('is-active');
-      menu.classList.toggle('is-active');
-  });
-})();
-
-// create post button
-var createPostEl = $('#create-post');
-var crea
-$('#create-new-post-btn').on('click', function () {
-  createPostEl.removeClass('hidden');
-  $('#create-new-post-btn').addClass('hidden');
-});
-
 // create new post
 let code_block = "";
 
 async function newPostHandler(event) {
   event.preventDefault();
   const title = document.querySelector('#post-title').value.trim();
-  console.log(title);
   const text = document.querySelector('.textarea').value.trim();
 
   const response = await fetch(`/api/posts`, {

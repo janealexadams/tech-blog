@@ -161,17 +161,6 @@ a:hover {
 }
 
 /* create post page */
-#create-new-post-btn {
-    margin-top: 50px;
-    text-align: center; 
-    display: block;
-    margin-left: auto;
-    margin-right: auto; 
-    background-color: #568EA3;
-    font-weight: 600;
-    color: white;
-}
-
 #upload_widget {
     margin-top: 10px;
     text-align: center; 
@@ -241,6 +230,15 @@ a:hover {
     background-color: #568EA3;
     font-weight: 600;
     font-size: 15px;
+    font-family: 'Roboto Mono', monospace !important;
+} 
+
+#delete-button {
+    background-color: #568EA3;
+    font-weight: 600;
+    margin-left: 15px;
+    font-size: 15px;
+    font-family: 'Roboto Mono', monospace !important;
 } 
 
 .card {
@@ -248,13 +246,6 @@ a:hover {
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
- #delete-button {
-    background-color: #568EA3;
-    font-weight: 600;
-    margin-left: 15px;
-    font-size: 15px;
-} 
 
 .update {
     display: none !important;
