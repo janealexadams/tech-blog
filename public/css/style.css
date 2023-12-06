@@ -274,7 +274,7 @@ a:hover {
 
 
 @media only screen and (max-width: 768px) {
-    .columns {
+    .posts-column {
         display: block !important;
         width: 195% !important;
         margin-left: 0px;
@@ -282,24 +282,37 @@ a:hover {
     }
 
 @media only screen and (max-width: 600px) {
-    .columns {
+    .posts-column {
         display: block !important;
         width: 200% !important;
         }
     }
 
-@media only screen and (max-width: 768px) {
+/* @media only screen and (max-width: 768px) {
     .first-container {
         display: block !important;
-        width: 50% !important;
+        width: 100% !important;
         margin-left: 0px;
         }
     .second-container {
         display: block !important;
-        width: 50% !important;
+        width: 100% !important;
         margin-left: 0px;
         }
-    }
+    } */
+
+/* @media only screen and (max-width: 600px) {
+    .first-container {
+        display: block !important;
+        width: 100% !important;
+        margin-left: 0px;
+        }
+    .second-container {
+        display: block !important;
+        width: 100% !important;
+        margin-left: 0px;
+        }
+    } */
 
 /* @media only screen and (max-width: 600px) {
     .first-container {
