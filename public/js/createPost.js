@@ -1,4 +1,4 @@
-// create new post
+// Create new post
 let code_block = "";
 
 async function newPostHandler(event) {
@@ -25,7 +25,7 @@ async function newPostHandler(event) {
   }
 }
 
-// cloudinary upload
+// Cloudinary upload
 var myWidget = cloudinary.createUploadWidget({
   cloudName: 'deqzppd4t',
   uploadPreset: 'ftr9mywz'

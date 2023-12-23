@@ -16,7 +16,7 @@ body {
     color: white;
 }
 
-/* toggle */
+/* Toggle */
 input[type=checkbox]{
     height: 0;
     width: 0;
@@ -60,7 +60,7 @@ input[type=checkbox]{
     width: 32.5px;
   }
 
-/* navbar */
+/* Navbar */
 .navbar-burger {
     color: #568EA3;
 }
@@ -115,7 +115,7 @@ a:hover {
     height: 100px !important;
 }
 
-/* login and signup */
+/* Sign in and Sign up */
 #signin-button, #signup-button {
     background-color: #568EA3;
     font-weight: 600;
@@ -160,7 +160,7 @@ a:hover {
     font-size: 10px;
 }
 
-/* create post page */
+/* Create post page */
 #upload_widget {
     margin-top: 10px;
     text-align: center; 
@@ -198,7 +198,7 @@ a:hover {
     display: none !important;
 }
 
-/* homepage */
+/* Homepage */
 .like-amount {
     padding-left: 2px;
     color: rgb(0, 0, 0);

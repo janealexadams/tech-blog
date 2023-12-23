@@ -3,8 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
-
-This website is a CMS-style blog site where developers can publish their blog posts and comment on other developers’ posts. This site was build completely from scratch, following the MVC paradigm in its architectural structure, using Handlebars.js as the templating language, Sequelize as the ORM, and the express-session npm package for authentication.
+This website is a CMS-style blog site where developers can publish their blog posts and comment on other developers’ posts. This site was build completely from scratch, following the MVC paradigm in its architectural structure - using Node.js and Express.js to create a RESTful API, with GET and POST, and DELETE routes for retrieving, deleting, and adding new data. This sit also uses Handlebars.js as the templating language, Sequelize as the ORM, and the express-session npm package for authentication.
 
 ## Contents
 - [Usage](#usage)
@@ -36,6 +35,8 @@ Start Server:
 - Sequelize
 - Express-session
 - dotenv
+- Node.js
+- JavaScript
 
 ## Questions
 If you have any questions about the repo, please contact me via email at janealexadams@gmail.com. You can find more of my work on my GitHub, [janealexadams](https://github.com/janealexadams).
@@ -45,4 +46,4 @@ Created by Jane Adams.
 
 ## Deployment
 https://dreadful-dungeon-10044-849ba164dcc5.herokuapp.com/
-![Tech Blog](assets/website-screenshot.png)
+![Tech Blog](assets/tech-blog.gif)

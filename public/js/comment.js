@@ -1,45 +1,44 @@
-// toggle navbar 
+// Toggle navbar 
 document.addEventListener('DOMContentLoaded', () => {
 
-    // get all "navbar-burger" elements
+    // Get all "navbar-burger" elements
     const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
   
-    // add a click event on each of them
+    // Add a click event on each of them
     $navbarBurgers.forEach( el => {
       el.addEventListener('click', () => {
   
-        // get the target from the "data-target" attribute
+        // Get the target from the "data-target" attribute
         const target = el.dataset.target;
         const $target = document.getElementById(target);
   
-        // toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
         el.classList.toggle('is-active');
         $target.classList.toggle('is-active');
       });
     });
 });
 
-// darkmode
+// Lightmode
 $('.theme-switch').on('click', function  () {
 
-    // background
+    // Background
     var element = document.body;
     element.classList.toggle("light-mode");
-    
-    // logo change
+
+    // Logo change
         var image_1 = $(".logo");
         var img1_src = "https://res.cloudinary.com/deqzppd4t/image/upload/v1701382022/T_9_kmt8mm.png";
         var img2_src = "https://res.cloudinary.com/deqzppd4t/image/upload/v1701293667/T_7_gbabdh.png";
-          
+            
         if (image_1.attr("src") == img1_src) {
             
             image_1.attr("src", img2_src);
-          } else {
+            } else {
             image_1.attr("src", img1_src);
-          }
-    });
+            }
+});
     
-// delete / comment on posts 
 async function checkButton(event) {
     if (event.target.classList.contains('btn-submit')) {
         commentFormHandler(event.target);
@@ -52,7 +51,7 @@ async function checkButton(event) {
     }
 };
 
-// comment on post
+// Comment on post
 async function commentFormHandler(button) {
     const post_id = parseInt(button.getAttribute("data-postid"));
     const text = document.querySelector('#new-comment-'+post_id).value.trim();
@@ -76,7 +75,7 @@ async function commentFormHandler(button) {
     }
 }
 
-// delete comment
+// Delete comment
 async function deleteFormHandler(button) {
     commentToDelete = button.parentElement;
     const response = await fetch(`/api/comments/${commentToDelete.dataset.id}`, {
@@ -90,7 +89,7 @@ async function deleteFormHandler(button) {
     }
 }
 
-// delete post
+// Delete post
 async function deletePostHandler(button) {
     const response = await fetch(`/api/posts/${button.dataset.postid}`, {
         method: 'DELETE'
@@ -103,7 +102,7 @@ async function deletePostHandler(button) {
     }
 }
 
-// add a comment
+// Add a comment
 async function commentFormHandler(button) {
     const post_id = parseInt(button.getAttribute("data-postid"));
     const text = document.querySelector('#new-comment-'+post_id).value.trim();
@@ -127,7 +126,7 @@ async function commentFormHandler(button) {
     }
 }
 
-// like button
+// Like button
 const likeButton = $('.like-button')
   likeButton.on("click", function() { 
     var likeCount = $(this).siblings(".like-counter").text();
